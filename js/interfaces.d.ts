@@ -1,6 +1,6 @@
 export interface IModule {
     name: string;
-    descripton: string;
+    description: string;
     include: string[];
     exclude: string[];
     userData: any;
