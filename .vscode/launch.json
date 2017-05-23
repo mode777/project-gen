@@ -7,6 +7,7 @@
         {
             "type": "node",
             "request": "launch",
+            "preLaunchTask": "build",
             "name": "Launch help",
             "outFiles": ["${workspaceRoot}/js/**"],
             "program": "${workspaceRoot}/src/index.ts",
@@ -18,6 +19,7 @@
         {
             "type": "node",
             "request": "launch",
+            "preLaunchTask": "build",
             "name": "Launch list",
             "outFiles": ["${workspaceRoot}/js/**"],
             "program": "${workspaceRoot}/src/index.ts",
@@ -30,14 +32,40 @@
         {
             "type": "node",
             "request": "launch",
+            "preLaunchTask": "build",
             "name": "Launch generate",
             "outFiles": ["${workspaceRoot}/js/**"],
             "program": "${workspaceRoot}/src/index.ts",
             "sourceMaps": true,
             "args": [
-                "generate",
-                "./../out",
-                "-m default|spa"
+                "generate", "--out", "./../output", "--modules", "default|spa", "myproject"
+            ],
+            "cwd": "${workspaceRoot}/examples/test"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "name": "Launch init",
+            "outFiles": ["${workspaceRoot}/js/**"],
+            "program": "${workspaceRoot}/src/index.ts",
+            "sourceMaps": true,
+            "args": [
+                "init"
+            ],
+            "cwd": "${workspaceRoot}/examples/test"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "name": "Launch module",
+            "outFiles": ["${workspaceRoot}/js/**"],
+            "program": "${workspaceRoot}/src/index.ts",
+            "sourceMaps": true,
+            "args": [
+                "module",
+                "testmodule"
             ],
             "cwd": "${workspaceRoot}/examples/test"
         },

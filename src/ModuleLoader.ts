@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as file from 'fs';
 import { IModule } from './interfaces';
 
-export class Template {   
+export class ModuleLoader {   
 
     private _root: string;
     private _modules: {[key: string]: IModule } = {};
@@ -31,7 +31,7 @@ export class Template {
         let files = glob.sync(path.join(this._root, "*.project.json"));
         files.forEach(f => {
             let name = path.basename(f).split(".")[0];
-            let module = <IModule>JSON.parse(file.readFileSync(f, "utf8"));
+            let module = <IModule>require(f);
             module.name = name;
             this._modules[name] = module; 
         }); 

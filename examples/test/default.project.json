@@ -1,3 +1,6 @@
 {
-    "description": "Creates a basic WebApi project"
+    "description": "Creates a basic WebApi project",
+    "settings": {
+        
+    }
 }
