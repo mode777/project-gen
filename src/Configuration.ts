@@ -8,9 +8,10 @@ export class Configuration {
     private _settings: any;
     private _input: string;
     private _output: string;
+    private _tokens: any;
 
     constructor(name: string, inputDir: string, outDir: string, modules: IModule[]){
-        let merged = <IModule>underscore.extend({ settings: {}, include: [], exclude: [] }, ...modules);
+        let merged = <IModule>underscore.extend({ settings: {}, include: [], exclude: [], tokens: {} }, ...modules);
         
         this._exclude = merged.exclude;
         this._include = merged.include;
@@ -19,7 +20,7 @@ export class Configuration {
         this._input = inputDir;
         this._output = outDir;
 
-        merged.settings.projectname = name;
+        merged.tokens.projectname = name;
     }
 
     public get include() { return this._include; }
@@ -27,4 +28,5 @@ export class Configuration {
     public get settings() { return this._settings; }
     public get inputDir() { return this._input; }
     public get outputDir() { return this._output; }
+    public get tokens() { return this._tokens; }
 }

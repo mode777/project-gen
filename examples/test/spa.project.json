@@ -1,3 +1,4 @@
 {
-    "description": "Adds an kendo spa client to the project"
+    "description": "Adds an kendo spa client to the project",
+    "templateExtensions": [".cs", ".js", ".csproj", ".json"]
 }

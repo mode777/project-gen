@@ -18,8 +18,8 @@ let list = () => {
 
 let generate = (name, options) => {
     console.log(options.out)
-    let input = <string>(path.isAbsolute(options.in) ? options.in : path.join(process.cwd(), options.in) || process.cwd());
-    let output = <string>(path.isAbsolute(options.out) ? options.out : path.join(process.cwd(), options.out) || path.join(process.cwd(), "out"));
+    let input = <string>(options.in ? path.isAbsolute(options.in) ? options.in : path.join(process.cwd(), options.in) : process.cwd());
+    let output = <string>(options.out ? path.isAbsolute(options.out) ? options.out : path.join(process.cwd(), options.out) : path.join(process.cwd(), "out"));
     let modules = <string[]>(options.modules || ["default"]) 
     
     let template = new ModuleLoader(input);   
