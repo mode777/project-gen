@@ -1,6 +1,7 @@
 import { IModule } from './interfaces';
 import * as underscore from 'underscore';
 
+
 export class Configuration {
 
     private _include: string[];
@@ -11,12 +12,17 @@ export class Configuration {
     private _tokens: any;
 
     constructor(name: string, inputDir: string, outDir: string, modules: IModule[]){
-        let merged = <IModule>underscore.extend({ settings: {}, include: [], exclude: [], tokens: {} }, ...modules);
+        let merged = <IModule>underscore.extend({ 
+            settings: {}, 
+            include: [], 
+            exclude: [], 
+            tokens: {} }, ...modules);
         
         this._exclude = merged.exclude;
         this._include = merged.include;
         this._settings = merged.settings;
-        
+        this._tokens = merged.tokens;
+
         this._input = inputDir;
         this._output = outDir;
 

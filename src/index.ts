@@ -4,34 +4,40 @@ import * as path from "path";
 import { Configuration } from "./Configuration";
 import { ModuleLoader } from "./ModuleLoader";
 import { IModule } from "./interfaces";
+import { Generator } from './Generator';
 
 
-let list = () => {
-    let template = new ModuleLoader(process.cwd());
+const list = () => {
+    const template = new ModuleLoader(process.cwd());
     console.info("Listing available modules");
     console.info(Array(80).join("-"));
     template.getModules().forEach(m => {
-        let desc = m.description || "-- no description --";
+        const desc = m.description || "-- no description --";
         console.info(`${m.name}\t\t${desc}`);
     });
 }
 
-let generate = (name, options) => {
-    console.log(options.out)
-    let input = <string>(options.in ? path.isAbsolute(options.in) ? options.in : path.join(process.cwd(), options.in) : process.cwd());
-    let output = <string>(options.out ? path.isAbsolute(options.out) ? options.out : path.join(process.cwd(), options.out) : path.join(process.cwd(), "out"));
-    let modules = <string[]>(options.modules || ["default"]) 
+const generate = (name, options) => {
+    const input = <string>(options.in ? path.isAbsolute(options.in) ? options.in : path.join(process.cwd(), options.in) : process.cwd());
+    const output = <string>(options.out ? path.isAbsolute(options.out) ? options.out : path.join(process.cwd(), options.out) : path.join(process.cwd(), "out"));
+    const modules = <string[]>(options.modules || ["default"]) 
     
-    let template = new ModuleLoader(input);   
+    const loader = new ModuleLoader(input);   
     
-    let requestedModules = modules
-        .map(m => template.getModule(m));
+    const requestedModules = modules
+        .map(m => loader.getModule(m));
 
-    let configuration = new Configuration(name, input, output, requestedModules);
-    console.log(configuration);
+    const configuration = new Configuration(
+        name, input, output, requestedModules);
+    
+    new Generator(configuration)
+        .collect()
+        .process();
+
+    console.info(`Project "${name}" generated in "${output}".`);
 }
 
-let init = (options) => {
+const init = (options) => {
     console.log("initialize template");
 }
 
@@ -57,7 +63,7 @@ program
     .option(
         "-m, --modules <modules...>", 
         "a pipe separated list of modules to include (defaults to 'default')", 
-        (str: string) => str.split(",").map(s => s.trim()))
+        (str: string) => str.split("|").map(s => s.trim()))
     .action(generate);
 
 program

@@ -2,5 +2,7 @@
     "description": "Creates a basic WebApi project",
     "settings": {
         
-    }
+    },
+    "include": ["./$projectname$/**"],
+    "templateExtensions": [".cs", ".js", ".csproj", ".json"]
 }

@@ -8,5 +8,6 @@ export interface IModule {
 }
 
 export interface IFile {
+    outputName: string;
     process();
 }
