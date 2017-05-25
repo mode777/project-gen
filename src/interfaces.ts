@@ -5,6 +5,7 @@ export interface IModule {
     exclude?: string[];
     settings?: any;
     tokens?: any;
+    templates?: string[];
 }
 
 export interface IFile {

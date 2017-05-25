@@ -39,6 +39,10 @@ let modules = (name, options) => {
     console.log("add module "+ name);
 }
 
+let register = (name, path) => {
+    console.log(`Register template '${name}' on path '${path}'`)
+}
+
 program
     .version(VERSION)
 
@@ -54,6 +58,7 @@ program
     .description("generate a project from a template")
     .option("-o, --out <dir>", "output directory")
     .option("-i, --in <dir>", "input template directory")
+    .option("-t, --template <name>", "a registered template to use")
     .option(
         "-m, --modules <modules...>", 
         "a pipe separated list of modules to include (defaults to 'default')", 
@@ -71,6 +76,12 @@ program
     .alias("m")
     .option("-d, --description", "the modules description")
     .description("adds a module to current directory")
+    .action(modules);
+
+program
+    .command("register <name> <path>")
+    .alias("r")
+    .description("register a template in a certain path")
     .action(modules);
 
 program.parse(process.argv);
