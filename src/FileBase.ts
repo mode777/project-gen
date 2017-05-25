@@ -26,7 +26,7 @@ export abstract class FileBase implements IFile {
     protected _replacePathTokens(path: string){
         const tokens = this._config.tokens;
         Object.keys(tokens)
-            .forEach(token => path = path.replace(`$${token}$`, tokens[token]));
+            .forEach(token => path = path.replace(new RegExp("\\$"+token+"\\$",'g'), tokens[token]));
         return path;
     }
 

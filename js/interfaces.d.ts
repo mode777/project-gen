@@ -4,4 +4,9 @@ export interface IModule {
     include?: string[];
     exclude?: string[];
     settings?: any;
+    tokens?: any;
+}
+export interface IFile {
+    outputName: string;
+    process(): any;
 }
