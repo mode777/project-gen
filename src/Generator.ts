@@ -4,6 +4,7 @@ import { IFile } from './interfaces';
 import { BinaryFile } from './BinaryFile';
 import * as path from 'path';
 import * as fs from 'fs';
+import { TemplateFile } from "./TemplateFile";
 
 export class Generator {
 
@@ -22,9 +23,9 @@ export class Generator {
                 .forEach(file => collection[file] = true));
         
         this._files = Object.keys(collection)
-            .map(file => {
-                return new BinaryFile(file, this._config); 
-            });
+            .map(file => this._isTemplateExtension(file)
+                ? new TemplateFile(file, this._config)
+                : new BinaryFile(file, this._config));
 
         return this;
     }
@@ -36,6 +37,10 @@ export class Generator {
         });
 
         return this;
+    }
+
+    private _isTemplateExtension(file: string){
+        return this._config.templates.indexOf(path.extname(file).toLocaleLowerCase()) >= 0;
     }
 
 

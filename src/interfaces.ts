@@ -1,3 +1,5 @@
+import * as dot from "dot";
+
 export interface IModule {
     name?: string,
     description?: string;
@@ -6,6 +8,7 @@ export interface IModule {
     settings?: any;
     tokens?: any;
     templates?: string[];
+    templateSettings?: any;
 }
 
 export interface IFile {

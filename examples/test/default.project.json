@@ -4,5 +4,5 @@
         
     },
     "include": ["./$projectname$/**"],
-    "templateExtensions": [".cs", ".js", ".csproj", ".json"]
+    "templates": [".cs", ".js", ".csproj", ".json"]
 }
