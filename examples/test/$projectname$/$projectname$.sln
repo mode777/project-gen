@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Data", "$projectname$.Data\$projectname$.Data.csproj", "{$$=it.guidFor("data_guid")$$}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Api", "$projectname$.Api\$projectname$.Api.csproj", "{$$=it.guidFor("api_guid")$$}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Common", "$projectname$.Common\$projectname$.Common.csproj", "{$$=it.guidFor("common_guid")$$}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Api", "$projectname$.Api\$projectname$.Api.csproj", "{$$=it.guidFor("api_guid")$$}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Data", "$projectname$.Data\$projectname$.Data.csproj", "{$$=it.guidFor("data_guid")$$}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Services", "$projectname$.Services\$projectname$.Services.csproj", "{$$=it.guidFor("services_guid")$$}"
 EndProject
@@ -17,18 +17,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{$$=it.guidFor("data_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$$=it.guidFor("data_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$$=it.guidFor("data_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$$=it.guidFor("data_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
-		{$$=it.guidFor("common_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$$=it.guidFor("common_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$$=it.guidFor("common_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$$=it.guidFor("common_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
 		{$$=it.guidFor("api_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{$$=it.guidFor("api_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{$$=it.guidFor("api_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{$$=it.guidFor("api_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
+		{$$=it.guidFor("common_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$$=it.guidFor("common_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$$=it.guidFor("common_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$$=it.guidFor("common_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
+		{$$=it.guidFor("data_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$$=it.guidFor("data_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$$=it.guidFor("data_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$$=it.guidFor("data_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
 		{$$=it.guidFor("services_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{$$=it.guidFor("services_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{$$=it.guidFor("services_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU

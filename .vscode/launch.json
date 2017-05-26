@@ -38,7 +38,7 @@
             "program": "${workspaceRoot}/src/index.ts",
             "sourceMaps": true,
             "args": [
-                "generate", "--out", "./../output", "--modules", "default|spa", "myproject"
+                "generate", "--clear", "--out", "./../output", "--modules", "default|spa", "TestProject"
             ],
             "cwd": "${workspaceRoot}/examples/test"
         },

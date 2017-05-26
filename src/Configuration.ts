@@ -25,8 +25,9 @@ export class Configuration {
     private _output: string;
     private _tokens: any;
     private _templates: string[];
+    private _clear: boolean;
 
-    constructor(name: string, inputDir: string, outDir: string, modules: IModule[]){
+    constructor(modules: IModule[]){
         let merged = <IModule>underscore.extend({ 
                 settings: {}, 
                 include: [], 
@@ -45,18 +46,24 @@ export class Configuration {
         this._templates = merged.templates
             .map(ext => ext.toLowerCase());
 
-        this._input = inputDir;
-        this._output = outDir;
-
-        merged.tokens.projectname = name;
         this._readTemplateSettings(merged.templateSettings);
     }
+
+    public get name() { return this.tokens.projectname; }
+    public set name(value: string) { this.tokens.projectname = value; }
+
+    public get inputDir() { return this._input; }
+    public set inputDir(value: string) { this._input = value; }
+
+    public get outputDir() { return this._output; }
+    public set outputDir(value: string) { this._output = value }
+
+    public get clearOutput() { return this._clear; }
+    public set clearOutput(value: boolean) { this._clear = value; }
 
     public get include() { return this._include; }
     public get exclude() { return this._exclude; }
     public get settings() { return this._settings; }
-    public get inputDir() { return this._input; }
-    public get outputDir() { return this._output; }
     public get tokens() { return this._tokens; }
     public get templateSettings() { return dot.templateSettings; }
     public get templates() { return this._templates; }

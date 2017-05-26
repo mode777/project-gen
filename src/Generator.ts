@@ -36,7 +36,8 @@ export class Generator {
         // create output dir if it doesn't exist
         fsx.mkdirpSync(this._config.outputDir);
         // clear output dir.
-        fsx.emptyDirSync(this._config.outputDir);
+        if(this._config.clearOutput)
+            fsx.emptyDirSync(this._config.outputDir);
 
         this._files.forEach(file => {
             console.info(file.outputName);

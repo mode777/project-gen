@@ -7,8 +7,8 @@
     <ProjectGuid>{$$=it.guidFor('common_guid')$$}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TSC.Common</RootNamespace>
-    <AssemblyName>TSC.Common</AssemblyName>
+    <RootNamespace>$projectname$.Common</RootNamespace>
+    <AssemblyName>$projectname$.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
