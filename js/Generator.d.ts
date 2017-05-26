@@ -5,4 +5,5 @@ export declare class Generator {
     constructor(config: Configuration);
     collect(): this;
     process(): this;
+    private _isTemplateExtension(file);
 }

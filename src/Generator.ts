@@ -1,10 +1,12 @@
-import { Configuration } from './Configuration';
 import * as glob from 'glob';
-import { IFile } from './interfaces';
-import { BinaryFile } from './BinaryFile';
 import * as path from 'path';
 import * as fs from 'fs';
+import * as fsx from 'fs-extra';
+
+import { Configuration } from './Configuration';
+import { IFile } from './interfaces';
 import { TemplateFile } from "./TemplateFile";
+import { BinaryFile } from './BinaryFile';
 
 export class Generator {
 
@@ -31,6 +33,11 @@ export class Generator {
     }
 
     public process(){
+        // create output dir if it doesn't exist
+        fsx.mkdirpSync(this._config.outputDir);
+        // clear output dir.
+        fsx.emptyDirSync(this._config.outputDir);
+
         this._files.forEach(file => {
             console.info(file.outputName);
             file.process();
@@ -40,7 +47,7 @@ export class Generator {
     }
 
     private _isTemplateExtension(file: string){
-        return this._config.templates.indexOf(path.extname(file).toLocaleLowerCase()) >= 0;
+        return this._config.templates.indexOf(path.extname(file).toLowerCase()) >= 0;
     }
 
 

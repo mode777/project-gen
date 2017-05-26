@@ -5,9 +5,7 @@ import * as path from 'path';
 
 export class BinaryFile extends FileBase {
 
-    public process() {
-        let targetPath: string;
-                
+    public process() {               
         mkdirpSync(path.dirname(this.outputName));
         copySync(this.inputName, this.outputName);
     }

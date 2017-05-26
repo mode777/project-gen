@@ -8,8 +8,7 @@ export abstract class FileBase implements IFile {
     private _config: Configuration;
     private _discard: boolean;
     private _outputName: string;
-
-    protected _input: string;
+    private _input: string;
 
     constructor(path: string, config: Configuration){
         this._config = config;
@@ -18,9 +17,11 @@ export abstract class FileBase implements IFile {
         this._createOutputName();
     }
 
+    protected get config() { return this._config; }
+
     public get outputName() { return this._outputName; }
     public get inputName() { return this._input; }
-
+    
     public abstract process();
 
     protected _replacePathTokens(path: string){

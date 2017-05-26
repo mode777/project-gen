@@ -42,13 +42,14 @@ export class Configuration {
         this._include = merged.include;
         this._settings = merged.settings;
         this._tokens = merged.tokens;
-        this._templates = merged.templates.map(ext => ext.toLocaleLowerCase());
+        this._templates = merged.templates
+            .map(ext => ext.toLowerCase());
 
         this._input = inputDir;
         this._output = outDir;
 
         merged.tokens.projectname = name;
-        this._parseTemplateSettings(merged.templateSettings);
+        this._readTemplateSettings(merged.templateSettings);
     }
 
     public get include() { return this._include; }
@@ -60,7 +61,7 @@ export class Configuration {
     public get templateSettings() { return dot.templateSettings; }
     public get templates() { return this._templates; }
 
-    private _parseTemplateSettings(config: any) {
+    private _readTemplateSettings(config: any) {
         const settings = dot.templateSettings;
         const setDotRegex = (name: string) => settings[name] = config[name] != undefined 
             ? new RegExp(config[name], "g") 
