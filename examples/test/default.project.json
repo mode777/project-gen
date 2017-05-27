@@ -1,10 +1,5 @@
 {
     "description": "Creates a basic WebApi project",
-    "settings": {
-        "connectionString": "ENTER CONNECTION STRING HERE",
-        "windowsAuthentication": "True",
-        "serverPort": "8080"
-    },
     "include": ["./$projectname$/**"],
     "templates": [".cs", ".js", ".csproj", ".json", ".sln", ".ts", ".config"]
 }

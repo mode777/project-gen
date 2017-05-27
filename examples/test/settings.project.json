@@ -1,0 +1,7 @@
+{
+    "settings": {
+        "connectionString": "ENTER CONNECTION STRING HERE",
+        "windowsAuthentication": "True",
+        "serverPort": "8080"
+    }
+}
