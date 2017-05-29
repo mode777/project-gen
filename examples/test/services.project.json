@@ -1,0 +1,9 @@
+{
+    "description": "Adds a services project",
+    "include": [
+        "./$projectname$/$projectname$.Services/**"
+    ],
+    "settings": {
+        "$services": true
+    }
+}

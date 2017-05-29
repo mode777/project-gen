@@ -14,6 +14,9 @@ export class TemplateFile extends FileBase {
     public process() {
         this._readFile();
         this._fileContent = dot.template(this._fileContent)(this._createTemplateData())
+        if(this._cancel)
+            return;
+            
         this._replaceContentTokens();
 
         mkdirpSync(path.dirname(this.outputName));

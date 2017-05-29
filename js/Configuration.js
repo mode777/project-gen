@@ -2,7 +2,7 @@
 const underscore = require("underscore");
 const dot = require("dot");
 const defaultTemplateSettings = {
-    evaulate: "\\$\\$([\\s\\S]+?)\\$\\$",
+    evaluate: "\\$\\$([\\s\\S]+?)\\$\\$",
     interpolate: "\\$\\$=([\\s\\S]+?)\\$\\$",
     encode: "\\$\\$!([\\s\\S]+?)\\$\\$",
     use: "\\{\\{#([\\s\\S]+?)\\}\\}",

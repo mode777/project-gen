@@ -1,0 +1,9 @@
+{
+    "description": "Adds an entity framework data project",
+    "include": [
+        "./$projectname$/$projectname$.Data/**"
+    ],
+    "settings": {
+        "$data": true
+    }
+}

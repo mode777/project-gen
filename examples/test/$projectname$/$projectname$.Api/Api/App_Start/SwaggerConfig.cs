@@ -1,3 +1,5 @@
+$$ if(!it.settings.swagger){ it.cancel(); } $$
+
 using System.Web.Http;
 using Swashbuckle.Application;
 using System.Linq;

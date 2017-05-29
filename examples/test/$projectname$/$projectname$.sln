@@ -7,10 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Api", "$proje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Common", "$projectname$.Common\$projectname$.Common.csproj", "{$$=it.guidFor("common_guid")$$}"
 EndProject
+$$? it.settings.$data $$
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Data", "$projectname$.Data\$projectname$.Data.csproj", "{$$=it.guidFor("data_guid")$$}"
 EndProject
+$$?$$
+$$? it.settings.$services $$
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "$projectname$.Services", "$projectname$.Services\$projectname$.Services.csproj", "{$$=it.guidFor("services_guid")$$}"
 EndProject
+$$?$$
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +29,18 @@ Global
 		{$$=it.guidFor("common_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{$$=it.guidFor("common_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{$$=it.guidFor("common_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
+		$$? it.settings.$data $$
 		{$$=it.guidFor("data_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{$$=it.guidFor("data_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{$$=it.guidFor("data_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{$$=it.guidFor("data_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
+		$$?$$
+		$$? it.settings.$services $$
 		{$$=it.guidFor("services_guid")$$}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{$$=it.guidFor("services_guid")$$}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{$$=it.guidFor("services_guid")$$}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{$$=it.guidFor("services_guid")$$}.Release|Any CPU.Build.0 = Release|Any CPU
+		$$?$$
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

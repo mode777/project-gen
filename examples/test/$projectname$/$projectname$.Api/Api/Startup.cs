@@ -21,7 +21,7 @@ namespace $projectname$.Api
 
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);
-            SwaggerConfig.Register(config);
+            $$? it.settings.swagger$$SwaggerConfig.Register(config);$$?$$
             
             UnityContainer container = new UnityContainer();
             UnityConfig.Register(container);

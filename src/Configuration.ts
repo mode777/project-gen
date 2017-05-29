@@ -3,7 +3,7 @@ import * as underscore from 'underscore';
 import * as dot from "dot";
 
 const defaultTemplateSettings = {
-    evaulate: "\\$\\$([\\s\\S]+?)\\$\\$",
+    evaluate: "\\$\\$([\\s\\S]+?)\\$\\$",
     interpolate: "\\$\\$=([\\s\\S]+?)\\$\\$",
     encode: "\\$\\$!([\\s\\S]+?)\\$\\$",
     use: "\\{\\{#([\\s\\S]+?)\\}\\}",
