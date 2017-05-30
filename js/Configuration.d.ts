@@ -1,4 +1,5 @@
 import { IModule } from './interfaces';
+import * as dot from "dot";
 export declare class Configuration {
     private _include;
     private _exclude;
@@ -17,7 +18,7 @@ export declare class Configuration {
     readonly exclude: string[];
     readonly settings: any;
     readonly tokens: any;
-    readonly templateSettings: any;
+    readonly templateSettings: dot.TemplateSettings;
     readonly templates: string[];
     private _readTemplateSettings(config);
 }

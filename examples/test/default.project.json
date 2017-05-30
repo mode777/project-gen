@@ -1,9 +1,5 @@
 {
     "description": "Creates a basic WebApi project",
-    "include": [
-        "./$projectname$/$projectname$.Api/**",
-        "./$projectname$/$projectname$.Common/**",
-        "./$projectname$/$projectname$.sln"
-    ],
+    "include": ["./$projectname$/**"],
     "templates": [".cs", ".js", ".csproj", ".json", ".sln", ".ts", ".config"]
 }
