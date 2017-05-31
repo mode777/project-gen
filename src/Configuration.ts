@@ -18,13 +18,13 @@ const defaultTemplateSettings = {
 
 export class Configuration {
 
-    private _include: string[];
-    private _exclude: string[];
-    private _settings: any;
+    private _include: string[] = [];
+    private _exclude: string[] = [];
+    private _settings: any = {};
     private _input: string;
     private _output: string;
     private _tokens: any;
-    private _templates: string[];
+    private _templates: string[] = [];
     private _clear: boolean;
 
     constructor(modules: IModule[]){
@@ -39,11 +39,15 @@ export class Configuration {
                 templateSettings: defaultTemplateSettings 
             }, ...modules);
         
-        this._exclude = merged.exclude;
-        this._include = merged.include;
-        this._settings = merged.settings;
+        modules.forEach(m => {
+            this._exclude = this._exclude.concat(m.exclude || []);
+            this._include = this._include.concat(m.include || []);
+            this._templates = this._templates.concat(m.templates || []);
+        })
+
+        this._settings = underscore.extend(this._settings, ...modules.map(m => m.settings || {}));
         this._tokens = merged.tokens;
-        this._templates = merged.templates
+        this._templates = this._templates
             .map(ext => ext.toLowerCase());
 
         this._readTemplateSettings(merged.templateSettings);

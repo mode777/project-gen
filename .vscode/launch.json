@@ -38,7 +38,7 @@
             "program": "${workspaceRoot}/src/index.ts",
             "sourceMaps": true,
             "args": [
-                "generate", "--clear", "--out", "./../output", "--modules", "default|spa|screen", "TestProject"
+                "generate", "--clear", "--out", "./../output", "--modules", "default|services|settings", "RfidCloud"
             ],
             "cwd": "${workspaceRoot}/examples/test"
         },
