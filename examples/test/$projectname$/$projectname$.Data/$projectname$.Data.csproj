@@ -7,8 +7,8 @@
     <ProjectGuid>{$$=it.guidFor("data_guid")$$}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TSC.Data</RootNamespace>
-    <AssemblyName>TSC.Data</AssemblyName>
+    <RootNamespace>$projectname$.Data</RootNamespace>
+    <AssemblyName>$projectname$.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
