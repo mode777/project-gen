@@ -1,0 +1,9 @@
+{
+  "name": "kindergarten-cop",
+  "dependencies": {},
+  "globalDependencies": {
+    "es2015-promise": "registry:env/es2015-promise#1.0.0+20160526151700",
+    "jquery": "registry:dt/jquery#1.10.0+20170310222111",
+    "kendo-ui": "registry:dt/kendo-ui#2017.1.118+20170221225939"
+  }
+}

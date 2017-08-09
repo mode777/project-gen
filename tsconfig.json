@@ -3,11 +3,13 @@
     "target": "es6",
     "outDir": "js",
     "module": "commonjs",
-    "declaration": true,
     "noImplicitAny": false,
     "moduleResolution": "node",
     "inlineSourceMap": true,
     "newLine": "LF"
   },
+  "exclude": [
+    "./examples/**/*"
+  ],
   "typeRoots": ["node_modules/@types"]
 }

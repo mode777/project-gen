@@ -1,3 +1,21 @@
 {
-    "description": "Adds an kendo spa client to the project"
+    "description": "Adds an kendo spa client to the project",
+    "include": [
+        "./$projectname$/$projectname$.Api/css/**",
+        "./$projectname$/$projectname$.Api/html/**",
+        "./$projectname$/$projectname$.Api/img/**",
+        "./$projectname$/$projectname$.Api/lib/**",
+        "./$projectname$/$projectname$.Api/src/**",
+        "./$projectname$/$projectname$.Api/typings/**",
+        "./$projectname$/$projectname$.Api/.bowerrc",
+        "./$projectname$/$projectname$.Api/app.config.js",
+        "./$projectname$/$projectname$.Api/bower.json",
+        "./$projectname$/$projectname$.Api/Index.html",
+        "./$projectname$/$projectname$.Api/require.config.js",
+        "./$projectname$/$projectname$.Api/tsconfig.json",
+        "./$projectname$/$projectname$.Api/typings.json"
+    ],
+    "settings": {
+        "$spa": true
+    }
 }

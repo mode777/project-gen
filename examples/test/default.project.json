@@ -1,9 +1,15 @@
 {
     "description": "Creates a basic WebApi project",
     "include": [
-        "./$projectname$/$projectname$.Api/**",
+        "./$projectname$/$projectname$.Api/Api/**",
+        "./$projectname$/$projectname$.Api/App_Data/**",
+        "./$projectname$/$projectname$.Api/Properties/**",
+        "./$projectname$/$projectname$.Api/$projectname$.Api.csproj",
+        "./$projectname$/$projectname$.Api/Nuget.config",
+        "./$projectname$/$projectname$.Api/packages.config",
+        "./$projectname$/$projectname$.Api/Web.config",
         "./$projectname$/$projectname$.Common/**",
         "./$projectname$/$projectname$.sln"
     ],
-    "templates": [".cs", ".js", ".csproj", ".json", ".sln", ".ts", ".config"]
+    "templates": [".cs", ".csproj", ".json", ".sln", ".ts", ".config"]
 }

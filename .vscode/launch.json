@@ -38,7 +38,7 @@
             "program": "${workspaceRoot}/src/index.ts",
             "sourceMaps": true,
             "args": [
-                "generate", "--clear", "--out", "./../output", "--modules", "default|services|settings", "RfidCloud"
+                "generate", "--clear", "--out", "./../output", "--modules", "default|services|data|settings|spa", "PaiInventur"
             ],
             "cwd": "${workspaceRoot}/examples/test"
         },

@@ -176,6 +176,49 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+
+  $$? it.settings.$spa $$
+  <ItemGroup>
+    <Content Include="css\site.css" />
+    <Content Include="css\theme.min.css" />
+    <Content Include="img\bosch.png" />
+    <Content Include="src\common\loaders\index.ts" />
+    <Content Include="src\common\loaders\AmdCssLoader.ts" />
+    <Content Include="src\common\loaders\AmdTemplateLoader.ts" />
+    <Content Include="src\common\loaders\AmdViewLoader.ts" />
+    <Content Include="src\common\index.ts" />
+    <Content Include="src\common\interfaces.ts" />
+    <Content Include="src\common\Modals.ts" />
+    <Content Include="src\common\TypedExtensions.ts" />
+    <Content Include="src\common\Widgets.ts" />
+    <Content Include="src\common\decorators.ts" />
+    <Content Include="src\config\router.config.ts" />
+    <Content Include="src\config\routeService.config.ts" />
+    <Content Include="src\config\viewLoader.config.ts" />
+    <Content Include="src\data\CrudSource.ts" />
+    <Content Include="src\data\DataViewModel.ts" />
+    <Content Include="src\data\EventHandlers.ts" />
+    <Content Include="src\data\GridBase.ts" />
+    <Content Include="src\data\GridView.ts" />
+    <Content Include="src\data\index.ts" />
+    <Content Include="src\data\ReadableSource.ts" />
+    <Content Include="src\services\NavigationService.ts" />
+    <Content Include="src\views\ErrorView.ts" />
+    <Content Include="src\views\HomeView.ts" />
+    <Content Include="src\views\MainLayout.ts" />
+    <Content Include="src\widgets\RouterLink.ts" />
+    <Content Include="src\Application.ts" />
+    <Content Include="src\bootstrap.ts" />
+    <Content Include="src\main.ts" /> 
+    <Content Include="app.config.js" /> 
+    <Content Include="bower.json" /> 
+    <Content Include="Index.html" /> 
+    <Content Include="require.config.js" /> 
+    <Content Include="tsconfig.json" /> 
+    <Content Include="typings.json" /> 
+  </ItemGroup>
+  $$?$$
+  
   <ItemGroup>
     <Compile Include="Api\App_Start\UnityConfig.cs" />
     <Compile Include="Api\App_Start\WebApiConfig.cs" />
