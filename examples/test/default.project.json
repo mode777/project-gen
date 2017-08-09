@@ -11,5 +11,5 @@
         "./$projectname$/$projectname$.Common/**",
         "./$projectname$/$projectname$.sln"
     ],
-    "templates": [".cs", ".csproj", ".json", ".sln", ".ts", ".config"]
+    "templates": [".cs", ".csproj", ".json", ".sln", ".ts", ".config", ".html"]
 }

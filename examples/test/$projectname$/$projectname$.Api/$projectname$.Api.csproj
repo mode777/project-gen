@@ -181,6 +181,9 @@
   <ItemGroup>
     <Content Include="css\site.css" />
     <Content Include="css\theme.min.css" />
+    <Content Include="html\error.html" />
+    <Content Include="html\home.html" />
+    <Content Include="html\layout.html" />
     <Content Include="img\bosch.png" />
     <Content Include="src\common\loaders\index.ts" />
     <Content Include="src\common\loaders\AmdCssLoader.ts" />
