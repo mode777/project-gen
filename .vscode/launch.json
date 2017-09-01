@@ -38,7 +38,7 @@
             "program": "${workspaceRoot}/src/index.ts",
             "sourceMaps": true,
             "args": [
-                "generate", "--clear", "--out", "./../output", "--modules", "default|services|data|settings|spa", "PaiInventur"
+                "generate", "--clear", "--out", "./../output", "--modules", "default|services|data|settings", "Phoenix.Chat"
             ],
             "cwd": "${workspaceRoot}/examples/test"
         },

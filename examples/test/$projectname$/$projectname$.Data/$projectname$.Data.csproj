@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\$projectname$.Common\$projectname$.Common.csproj">
-      <Project>{$$=it.guidFor("common_guid")$$}</Project>
+      <Project>{$$=it.guidFor("common_guid").toUpperCase()$$}</Project>
       <Name>$projectname$.Common</Name>
     </ProjectReference>
   </ItemGroup>

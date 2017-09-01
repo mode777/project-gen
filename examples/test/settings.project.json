@@ -1,8 +1,8 @@
 {
     "settings": {
-        "connectionString": "ENTER CONNECTION STRING HERE",
+        "connectionString": "Data Source=5.189.131.48;Initial Catalog=PHOENIX_CHAT;User ID=RBAN_ADAPTERTRACKING;Password=570$Uuxwp7Mcxo7fhy;MultipleActiveResultSets=True",
         "windowsAuthentication": false,
-        "serverPort": "5555",
+        "serverPort": "8081",
         "swagger": true
     }
 }
